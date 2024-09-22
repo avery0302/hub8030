@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dev?useSSL=false&serverTimezone=UTC
+    username: root
+    password: ${DB_PWD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1      # Redis 服务的地址
+    port: 6379           # Redis 服务的端口
+    timeout: 60000        # 超时时间，单位为毫秒
+
+mybatis:
+  type-aliases-package: com.example.hub3010.model
+  configuration:
+    map-underscore-to-camel-case: true  # 启用下划线转驼峰命名法
+
+server:
+  port: 8030
